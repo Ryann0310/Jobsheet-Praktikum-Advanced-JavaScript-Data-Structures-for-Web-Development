@@ -68,3 +68,14 @@ const allRatingValues = productsNested.flatMap(p => p.reviews.map(r => r.rating)
 
 console.log(findProductsByTag(productsNested, "electronics"));
 console.log(reviewCounts);
+
+//Bagian 4
+// Latihan 4.1
+const allTagsFlat = productsNested.flatMap(p => p.tags);
+console.log("Semua Tags:", allTagsFlat);
+
+// Latihan 4.2
+const allComments = productsNested.flatMap(p => 
+    p.reviews.map(review => review.comment)
+);
+console.log("Semua Comments:", allComments);
