@@ -14,15 +14,3 @@ function groupByCategory(products) {
         return groups;
     }, {});
 }
-
-// Latihan 10.1 & 10.2: Frequency Counting
-function countFrequency(array) {
-    return array.reduce((counts, item) => {
-        counts[item] = (counts[item] || 0) + 1;
-        return counts;
-    }, {});
-}
-
-// Menghitung frekuensi kategori dari produk
-const categoriesArray = products.map(p => p.category);
-console.log("Frekuensi Kategori:", countFrequency(categoriesArray));
