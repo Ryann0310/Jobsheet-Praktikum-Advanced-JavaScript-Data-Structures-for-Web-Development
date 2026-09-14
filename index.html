@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Product Explorer</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .product-card { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 8px; width: 300px; }
-        .product-card img { max-width: 100%; border-radius: 4px; }
-    </style>
-</head>
+<head><title>Product Explorer</title></head>
 <body>
     <h1>Katalog Produk</h1>
     
-    <div id="product-list"></div>
+    <input type="text" id="search-input" placeholder="Cari produk..." />
+    
+    <select id="category-select">
+        <option value="all">Semua Kategori</option>
+        <option value="laptops">Laptops</option>
+        <option value="phones">Phones</option>
+    </select>
+    
+    <select id="sort-select">
+        <option value="default">Urutan Default</option>
+        <option value="price-asc">Harga Termurah</option>
+        <option value="price-desc">Harga Termahal</option>
+    </select>
+
+    <div id="product-list" style="margin-top: 20px;"></div>
     
     <script src="app.js"></script>
 </body>
